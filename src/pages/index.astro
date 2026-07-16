@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const categoryLabel = { field: 'field', log: 'log', route: 'route' };
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+---
+<Layout title="Field Notes">
+  <ul class="entry-list">
+    {posts.map((post) => (
+      <li>
+        <a class="entry-row" href={`/entries/${post.slug}/`}>
+          <span class={`stamp ${post.data.category}`}>{categoryLabel[post.data.category]}</span>
+          <span class="entry-date">{post.data.date}</span>
+          <h2 class="entry-title">{post.data.title}</h2>
+          <p class="entry-excerpt">{post.data.excerpt}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const categoryLabel = { field: 'field', log: 'log', route: 'route' };
+---
+<Layout title={`${post.data.title} — Field Notes`} description={post.data.excerpt}>
+  <article>
+    <header class="post-header">
+      <span class={`stamp ${post.data.category}`}>{categoryLabel[post.data.category]}</span>
+      <span class="entry-date">{post.data.date}</span>
+      <h1 class="post-title">{post.data.title}</h1>
+    </header>
+    <div class="post-body">
+      <Content />
+    </div>
+  </article>
+</Layout>
