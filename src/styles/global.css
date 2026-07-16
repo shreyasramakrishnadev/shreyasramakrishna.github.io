@@ -128,26 +128,43 @@ main { padding: 40px 0 80px; }
   margin: 12px 0 0;
 }
 
-.post-body :global(p) { margin: 0 0 1.2em; }
-.post-body :global(h2) {
+.post-body p { margin: 0 0 1.2em; }
+.post-body h2 {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 2em 0 0.8em;
 }
-.post-body :global(blockquote) {
+.post-body blockquote {
   margin: 1.5em 0;
   padding-left: 16px;
   border-left: 2px solid var(--rule);
   color: var(--muted);
 }
-.post-body :global(code) {
+.post-body code {
   font-family: var(--font-display);
   font-size: 0.85em;
   background: var(--paper-raised);
   padding: 2px 5px;
   border-radius: 4px;
+}
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1.8em 0;
+  display: block;
+}
+
+.post-body img + em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: -1.2em;
+  margin-bottom: 1.8em;
 }
 
 .site-footer {
