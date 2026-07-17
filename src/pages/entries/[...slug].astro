@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
-const categoryLabel = { field: 'field', log: 'log', route: 'route' };
+const categoryLabel = { shiptalk: 'shiptalk', sidequest: 'sidequest', wanderlog: 'wanderlog' };
 ---
 <Layout title={`${post.data.title} — Field Notes`} description={post.data.excerpt}>
   <article>

@@ -1,7 +1,7 @@
 ---
 title: "What surprised me about [a place you visited]"
 date: "2026-07-10"
-category: "route"
+category: "wanderlog"
 excerpt: "Not an itinerary — just the things that didn't match what I expected."
 draft: false
 ---

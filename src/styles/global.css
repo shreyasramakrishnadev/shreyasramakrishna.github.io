@@ -3,9 +3,9 @@
   --paper: #f3f1ea;
   --paper-raised: #ffffff;
   --rule: #d8d3c4;
-  --stamp-field: #8a5a2b;   /* work / SE entries */
-  --stamp-log: #3f6b5c;     /* hobbies / passtimes */
-  --stamp-route: #6b4c8a;   /* travel */
+  --stamp-shiptalk: #8a5a2b;   /* work / SE entries */
+  --stamp-sidequest: #3f6b5c;     /* hobbies / passtimes */
+  --stamp-wanderlog: #6b4c8a;   /* travel */
   --muted: #6b6558;
 
   --font-display: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
@@ -68,6 +68,7 @@ nav.site-nav {
 }
 
 nav.site-nav a { text-decoration: none; color: var(--muted); }
+nav.site-nav a { text-transform: capitalize; }
 nav.site-nav a:hover { color: var(--ink); }
 
 main { padding: 40px 0 80px; }
@@ -95,9 +96,9 @@ main { padding: 40px 0 80px; }
   transform: rotate(-1.5deg);
 }
 
-.stamp.field { color: var(--stamp-field); }
-.stamp.log { color: var(--stamp-log); }
-.stamp.route { color: var(--stamp-route); }
+.stamp.shiptalk { color: var(--stamp-shiptalk); }
+.stamp.sidequest { color: var(--stamp-sidequest); }
+.stamp.wanderlog { color: var(--stamp-wanderlog); }
 
 .entry-date {
   font-family: var(--font-display);
@@ -126,6 +127,31 @@ main { padding: 40px 0 80px; }
   font-size: 34px;
   line-height: 1.15;
   margin: 12px 0 0;
+}
+
+.about-header {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.about-photo {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .about-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .post-body p { margin: 0 0 1.2em; }

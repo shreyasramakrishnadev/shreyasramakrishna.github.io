@@ -1,7 +1,7 @@
 ---
 title: "Five rooms, three cities, one trip to India from Boston I'm still thinking about"
 date: "2026-06-01"
-category: "field"
+category: "shiptalk"
 excerpt: "Eight weeks back in India for work — GenAI talks, sales enablement, and the conversations that didn't end when the sessions did."
 draft: false
 ---

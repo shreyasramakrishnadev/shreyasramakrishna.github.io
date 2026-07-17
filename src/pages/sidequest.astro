@@ -2,18 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const categoryLabel = { shiptalk: 'shiptalk', sidequest: 'sidequest', wanderlog: 'wanderlog' };
-
 const posts = (await getCollection('blog'))
-  .filter((p) => !p.data.draft)
+  .filter((p) => !p.data.draft && p.data.category === 'sidequest')
   .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
-<Layout title="Between Deploys">
+<Layout title="Sidequest — Hobbies / Passtimes">
   <ul class="entry-list">
     {posts.map((post) => (
       <li>
         <a class="entry-row" href={`/entries/${post.slug}/`}>
-          <span class={`stamp ${post.data.category}`}>{categoryLabel[post.data.category]}</span>
+          <span class="stamp sidequest">sidequest</span>
           <span class="entry-date">{post.data.date}</span>
           <h2 class="entry-title">{post.data.title}</h2>
           <p class="entry-excerpt">{post.data.excerpt}</p>
@@ -21,4 +19,5 @@ const posts = (await getCollection('blog'))
       </li>
     ))}
   </ul>
+  {posts.length === 0 && <p class="entry-excerpt">No posts here yet — check back soon.</p>}
 </Layout>

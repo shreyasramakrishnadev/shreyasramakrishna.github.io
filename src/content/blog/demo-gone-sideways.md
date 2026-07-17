@@ -1,7 +1,7 @@
 ---
 title: "What a demo going sideways actually taught me"
 date: "2026-07-01"
-category: "field"
+category: "shiptalk"
 excerpt: "The prospect's Wi-Fi died mid-demo. Here's what I did next, and what I'd do differently."
 draft: false
 ---

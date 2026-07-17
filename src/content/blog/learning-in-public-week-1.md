@@ -1,7 +1,7 @@
 ---
 title: "Week 1 of learning [your hobby here]"
 date: "2026-07-05"
-category: "log"
+category: "sidequest"
 excerpt: "Starting a learning-in-public series — mistakes and all."
 draft: false
 ---

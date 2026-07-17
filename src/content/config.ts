@@ -5,7 +5,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.string(),
-    category: z.enum(['field', 'log', 'route']),
+    category: z.enum(['shiptalk', 'sidequest', 'wanderlog']),
     // field  = SE / work life
     // log    = passtimes / hobbies / learning-in-public
     // route  = travel
