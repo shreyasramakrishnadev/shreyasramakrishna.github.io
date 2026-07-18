@@ -27,7 +27,7 @@ point of flying halfway around the world.
 
 ## On stage at AWS Summit, Bengaluru
 
-![Speaking at the AWS Summit Bengaluru](/images/AWSSummit_BLR.jpeg)
+![Speaking at the AWS Summit Bengaluru](/images/SR_Booth_AWS_BLR.jpeg)
 ![Speaking at the AWS Summit Bengaluru](/images/AWS_Speaker_BLR.jpeg)
 ![Speaking at the AWS Summit Bengaluru](/images/SR_Speaker.jpeg)
 
@@ -41,7 +41,7 @@ isn't something you can manufacture with slides.
 
 ## Kochi: an hour that maybe shifted something
 
-![Speaking at the AWS Summit Bengaluru](/images/SR_Booth_AWS_BLR.jpeg)
+![Speaking at the AWS Summit Bengaluru](/images/Kochi_ITLC.jpg)
 
 *In Kochi, hosted by the ITLC Kochi community, I spent a full hour with
 100+ IT leaders from across South India. We started with observability
