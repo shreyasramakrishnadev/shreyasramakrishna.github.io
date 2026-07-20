@@ -6,20 +6,19 @@ excerpt: "Node, git, DNS, and a lot of trial and error — the real, unglamorous
 draft: false
 ---
 
-This site didn't start with a plan so much as a question: I wanted to
-start writing, and I didn't know where to begin technically. What
-followed was one long night that took me from an empty folder to an
+This site didn't start from a blank slate of "I don't know how to build
+a website." I'd already built one before — a WordPress site hosted on
+AWS Lightsail — so I knew that option, and knew it worked. What I wanted
+this time was something different: full control over the design instead
+of working within a theme, a real hands-on understanding of git, DNS,
+and deployment instead of a platform handling all of that invisibly, and
+something that would read as more credible to the technical audience I
+was actually trying to reach. That narrowed it down fast: a static site,
+built with Astro, deployed through GitHub Pages.
+
+What followed was one long night that took me from an empty folder to an
 actual live domain — with more detours than I expected for something
 that, on paper, sounds simple.
-
-## The stack, and why it wasn't overkill
-
-I ended up on Astro, a static site generator, deployed via GitHub Pages,
-with a custom domain on top. That's a few more moving pieces than a
-"just start a Substack" approach — but it meant full control over design,
-and a genuinely useful side effect: building it forced me to actually
-learn git, GitHub Actions, and basic DNS, rather than treating them as
-things other people handle.
 
 ## The part nobody warns you about: your own machine
 
@@ -60,14 +59,12 @@ skips past on the first try.
 ## What "one night" actually means
 
 By the time the site was actually live at its own domain, showing a real
-page instead of an error, it had been hours — Node, Homebrew, git auth,
+page instead of an error, it had been a couple of hours — Node, Homebrew, git auth,
 DNS, and a certificate delay, stacked one after another. None of it was
 hard in isolation. All of it, back to back, is a genuinely different
 experience than "add a blog in five minutes," which is usually how these
 things get pitched.
 
 I don't think that's a mark against doing it this way. If anything, the
-friction is most of what I actually learned from. A hosted blog platform
-would have gotten me writing faster, but I wouldn't understand how any
-of the pieces underneath actually work — and now, when something breaks,
-I at least know where to start looking.
+friction is most of what I actually learned from. A hosted platform would
+have gotten me writing faster, but I wouldn't understand how the many pieces underneath actually work — and now, when something breaks, I atleast know where to start looking.
