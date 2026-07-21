@@ -1,6 +1,6 @@
 ---
 title: "How this site went from zero to live in one night"
-date: "2026-07-21"
+date: "2026-06-10"
 category: "sidequest"
 excerpt: "Node, git, DNS, and a lot of trial and error — the real, unglamorous path from an empty folder to a working personal website."
 draft: false
