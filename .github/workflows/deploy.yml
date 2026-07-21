@@ -35,7 +35,7 @@ jobs:
       - name: Check for broken links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --base . --no-progress ./dist
+          args: --no-progress --root-dir $GITHUB_WORKSPACE/dist ./dist
           fail: true
 
   deploy:
