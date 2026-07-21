@@ -214,6 +214,39 @@ main { padding: 40px 0 80px; }
   border-radius: 4px;
 }
 
+.post-body pre {
+  position: relative;
+  background: var(--paper-raised) !important;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+.post-body pre code,
+.post-body pre code span {
+  color: var(--ink) !important;
+  background: transparent !important;
+  font-family: var(--font-display);
+}
+
+.post-body pre[data-language="prompt"] {
+  border-left: 3px solid var(--stamp-shiptalk);
+  padding-top: 32px;
+}
+
+.post-body pre[data-language="prompt"]::before {
+  content: "PROMPT";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--stamp-shiptalk);
+}
+
 .post-body img {
   max-width: 100%;
   height: auto;

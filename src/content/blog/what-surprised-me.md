@@ -3,7 +3,7 @@ title: "What surprised me about [a place you visited]"
 date: "2026-07-10"
 category: "wanderlog"
 excerpt: "Not an itinerary — just the things that didn't match what I expected."
-draft: false
+draft: true
 ---
 
 The itinerary-style travel post is the easiest to write and the least
