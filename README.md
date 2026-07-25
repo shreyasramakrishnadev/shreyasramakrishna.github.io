@@ -1,7 +1,7 @@
-# Between Deploys — Shreyas' blog on work, wander and whtever else
+# Between Deploys — Shreyas' blog on work, travel and sidequests
 
 A static Astro blog, ready to deploy on GitHub Pages, with three
-post categories: `shiptalk` (work/SE life), `wanderlog` (travel), 'sidequest' (hobbies/learning).
+post categories: `shiptalk` (work/SE life), `wanderlog` (travel), `sidequest` (hobbies/learning).
 
 ## 1. Local setup
 
