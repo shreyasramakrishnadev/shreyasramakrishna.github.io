@@ -1,8 +1,7 @@
-# Field Notes — starter blog
+# Between Deploys — Shreyas' blog on work, wander and whtever else
 
-A minimal Astro blog, ready to deploy on GitHub Pages, pre-wired with three
-post categories: `field` (work/SE life), `log` (hobbies/learning), `route`
-(travel).
+A static Astro blog, ready to deploy on GitHub Pages, with three
+post categories: `shiptalk` (work/SE life), `wanderlog` (travel), 'sidequest' (hobbies/learning).
 
 ## 1. Local setup
 
@@ -71,7 +70,7 @@ from any existing post:
 ---
 title: "Your post title"
 date: "2026-07-15"
-category: "field"   # field | log | route
+category: "shiptalk"   # shiptalk | wanderlog | sidequest
 excerpt: "One sentence that shows up in the list view."
 draft: false
 ---
@@ -87,5 +86,3 @@ Save, commit, push — the site rebuilds and deploys automatically.
 - `src/layouts/Layout.astro` — change the site title/tagline in the `<header>`
 - `src/styles/global.css` — colors and fonts are all CSS variables at the top
   if you want to adjust the palette later
-- Delete the three sample posts in `src/content/blog/` once you've written
-  your own (or keep them as templates and just edit in place)
