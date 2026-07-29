@@ -1,6 +1,6 @@
 ---
 title: "Three months into running deal reviews: what I'm learning about listening first"
-date: "2026-07-23"
+date: "2026-07-25"
 category: "shiptalk"
 excerpt: "I'm not a veteran at this yet, but three months of running deal reviews for my SE team has already taught me something about the order you say things in."
 draft: false
