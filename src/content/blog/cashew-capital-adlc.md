@@ -1,6 +1,6 @@
 ---
 title: "Mapping a fake lending app to the Agentic Development Lifecycle"
-date: "2026-08-18"
+date: "2026-08-8"
 category: "sidequest"
 excerpt: "Somewhere around the third or fourth session building Cashew Capital, I learned there's already a name for the process I'd been stumbling through: the ADLC. Here's how the work maps to it — and the gaps I'm leaving open on purpose."
 draft: false
