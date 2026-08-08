@@ -9,8 +9,8 @@ draft: false
 With the [model question settled](/entries/cashew-capital-harness/), two problems remained: Cashew Advisor
 could confidently improvise loan terms that didn't match my own site,
 and it did amortization math in its head with no guarantee it was
-right. This post is about closing both gaps — retrieval-augmented
-generation (RAG) for the facts, tool calling for the math — and the
+right. This post is about closing both gaps: retrieval-augmented
+generation (RAG) for the facts, tool calling for the math. The
 moment they worked together in a single response, which is when this
 stopped feeling like a demo and started feeling like a small, real
 system.
@@ -26,8 +26,8 @@ its own generated numbers.
 
 I deliberately built the lightest version of RAG that's still a
 *correct* implementation, rather than reaching for a managed vector
-database I didn't need at this scale. A handful of markdown documents —
-rates, terms, an FAQ — get chunked, embedded once via Bedrock's Titan
+database I didn't need at this scale. A handful of markdown documents
+(rates, terms, an FAQ) get chunked, embedded once via Bedrock's Titan
 embedding model, and saved as a flat JSON file. At query time, the
 user's question gets embedded the same way, compared against every
 stored chunk with plain cosine similarity, and the top few matches get
@@ -36,7 +36,7 @@ infrastructure, just an array in memory — genuinely sufficient for a
 knowledge base this size, and a good reminder that "the correct
 architecture" and "the biggest architecture" aren't the same thing.
 
-The actual hurdle here wasn't the RAG logic itself — it was a build
+The actual hurdle here wasn't the RAG logic itself, it was a build
 pipeline bug I wouldn't have predicted. TypeScript's compiler only
 compiles `.ts` files into the output folder; it has no idea a plain
 `embeddings.json` file sitting next to the source code needs to come
@@ -47,7 +47,7 @@ diagnosed, but a good example of the class of bug that only shows up
 once code leaves your laptop.
 
 I also picked, entirely by accident, the worst possible week to ship
-this — a real, hours-long GitHub Actions platform outage landed right
+this. A real, hours-long GitHub Actions platform outage landed right
 in the middle of deploying the RAG changes, and I spent a genuinely
 frustrating stretch ruling out my own account, billing, and
 configuration before finding GitHub's own status page confirming it
@@ -65,28 +65,28 @@ land on your exact made-up numbers by coincidence.
 
 RAG fixes facts. It does nothing for arithmetic. Ask a language model to
 compute a loan's amortization schedule in its head, and it's doing
-multi-step math via next-token prediction — often close, not guaranteed
+multi-step math via next-token prediction. It's often close, not guaranteed
 exact. Tool calling closes that gap by letting Claude request a real
 function call instead of estimating: it names the function, I run the
 actual deterministic code, and I hand the real result back for it to
 incorporate into its answer.
 
-I built one tool — a standard amortization calculator — and had Cursor
+I built one tool: a standard amortization calculator, and had Cursor
 implement both the tool schema and the multi-turn request loop that
 handles it (detect a tool request, execute the real function, send the
 result back, get the final answer). The mechanics of that loop are easy
 to get subtly wrong — Anthropic's API requires the original tool
-request and its result to be paired correctly across two messages — and
+request and its result to be paired correctly across two messages.
 Cursor got that part right on the first pass.
 
 What it didn't get right the first time was the math itself: the
 standard amortization formula divides by zero when the interest rate is
-exactly 0%. JavaScript doesn't throw an error there — it silently
+exactly 0%. JavaScript doesn't throw an error there instead it silently
 returns `NaN`, which is worse than a crash, because a `NaN` dressed up
 in a friendly sentence looks exactly like a real answer. Catching that
 before it shipped was a small, plain reminder that AI-generated code
 reads as confident and complete whether or not it's actually handled
-every case — the review habit doesn't get to relax just because the
+every case. The review habit doesn't get to relax just because the
 code looks right.
 
 ## A single response, annotated
