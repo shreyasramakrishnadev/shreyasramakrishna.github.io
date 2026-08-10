@@ -56,7 +56,7 @@ once-a-year video call, but real familiarity — was one of the clearest
 "this is worth it" moments of the whole trip.
 
 My daughter turned 8 during the trip, and her experience was the most complicated at first. 
-She missed second grade back home. She missed second grade back in the States, so we set
+She missed second grade back in the States, so we set
 her up with a private tutor for online classes to stay current with her
 actual curriculum — which worked academically, but wasn't the same as a
 classroom. She missed her friends, and she missed recess — the specific,
