@@ -3,7 +3,7 @@ title: "Planning Alaska like an SE planning a POV: dependencies, risk, and two k
 date: "2026-07-18"
 category: "wanderlog"
 excerpt: "11 days, Boston to Anchorage and back, two young kids — and it turns out planning a family trip isn't that different from running a proof of concept."
-draft: false
+draft: true
 ---
 
 Flights are booked — Boston to Anchorage and back. The rental car is
